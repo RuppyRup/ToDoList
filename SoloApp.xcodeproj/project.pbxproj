@@ -13,6 +13,10 @@
 		E7F7FEFA1E8BA7FD0008F3C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F7FEF91E8BA7FD0008F3C1 /* Assets.xcassets */; };
 		E7F7FEFD1E8BA7FD0008F3C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F7FEFB1E8BA7FD0008F3C1 /* LaunchScreen.storyboard */; };
 		E7F7FF081E8BA7FE0008F3C1 /* SoloAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7FF071E8BA7FE0008F3C1 /* SoloAppTests.swift */; };
+		E7F7FF131E8BC0600008F3C1 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7FF121E8BC0600008F3C1 /* ItemTableViewCell.swift */; };
+		E7F7FF151E8BC78E0008F3C1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7FF141E8BC78E0008F3C1 /* Item.swift */; };
+		E7F7FF171E8BC9F90008F3C1 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7FF161E8BC9F90008F3C1 /* ItemTableViewController.swift */; };
+		E7F7FF191E8E8D620008F3C1 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7FF181E8E8D620008F3C1 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		E7F7FF031E8BA7FE0008F3C1 /* SoloAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoloAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F7FF071E8BA7FE0008F3C1 /* SoloAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloAppTests.swift; sourceTree = "<group>"; };
 		E7F7FF091E8BA7FE0008F3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F7FF121E8BC0600008F3C1 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		E7F7FF141E8BC78E0008F3C1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E7F7FF161E8BC9F90008F3C1 /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
+		E7F7FF181E8E8D620008F3C1 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 				E7F7FEF91E8BA7FD0008F3C1 /* Assets.xcassets */,
 				E7F7FEFB1E8BA7FD0008F3C1 /* LaunchScreen.storyboard */,
 				E7F7FEFE1E8BA7FD0008F3C1 /* Info.plist */,
+				E7F7FF121E8BC0600008F3C1 /* ItemTableViewCell.swift */,
+				E7F7FF141E8BC78E0008F3C1 /* Item.swift */,
+				E7F7FF161E8BC9F90008F3C1 /* ItemTableViewController.swift */,
+				E7F7FF181E8E8D620008F3C1 /* DataService.swift */,
 			);
 			path = SoloApp;
 			sourceTree = "<group>";
@@ -199,7 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F7FF171E8BC9F90008F3C1 /* ItemTableViewController.swift in Sources */,
+				E7F7FF151E8BC78E0008F3C1 /* Item.swift in Sources */,
 				E7F7FEF51E8BA7FD0008F3C1 /* ViewController.swift in Sources */,
+				E7F7FF191E8E8D620008F3C1 /* DataService.swift in Sources */,
+				E7F7FF131E8BC0600008F3C1 /* ItemTableViewCell.swift in Sources */,
 				E7F7FEF31E8BA7FD0008F3C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
