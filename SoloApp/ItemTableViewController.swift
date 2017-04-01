@@ -10,20 +10,44 @@ import UIKit
 
 class ItemTableViewController: UITableViewController {
     
+        
     var itemsArray = [Item]()
 
     func loadSampleItems() {
-        
-        
         itemsArray += [Item(name:"Item 1"), Item(name:"Item 2"), Item(name:"Item 3")]
+    }
+    
+    // unarchive the object stored with the key and downcast to an array to Item objects from Item.ArchiveURL.path
+    func loadItems() -> [Item]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Item.ArchiveURL.path) as? [Item]
+    }
+    
+    // save the array to the phone at Item.ArchiveURL.path
+    func saveItemsArray() {
+        let isSaved = NSKeyedArchiver.archiveRootObject(itemsArray, toFile: Item.ArchiveURL.path)
+        if !isSaved {
+            print("Failed to save items")
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadSampleItems() // adds Items to the array
+        
+        
+     
+        
+        //loadSampleItems() // adds Items to the array
+        
         navigationItem.leftBarButtonItem = editButtonItem //adds edit button to items can be deleted.Need to also implement to editting override function added as a template and update the code.
+        
+        // Load saved items
+        if let savedItems = loadItems() {
+            itemsArray += savedItems
+        }
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,6 +87,7 @@ class ItemTableViewController: UITableViewController {
                 itemsArray.append(savedItem!)
                 tableView.insertRows(at: [newIndexPath], with: .bottom)
             }
+        saveItemsArray()
         }
     }
     
@@ -97,6 +122,7 @@ class ItemTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             self.itemsArray.remove(at: indexPath.row)
+            saveItemsArray()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

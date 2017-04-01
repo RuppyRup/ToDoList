@@ -155,6 +155,7 @@
 				TargetAttributes = {
 					E7F7FEEE1E8BA7FD0008F3C1 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = AF2ZVC23ZQ;
 						ProvisioningStyle = Automatic;
 					};
 					E7F7FF021E8BA7FE0008F3C1 = {
@@ -351,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AF2ZVC23ZQ;
 				INFOPLIST_FILE = SoloApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RuppyRup.SoloApp;
@@ -363,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AF2ZVC23ZQ;
 				INFOPLIST_FILE = SoloApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RuppyRup.SoloApp;
@@ -418,6 +421,7 @@
 				E7F7FF0E1E8BA7FE0008F3C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7F7FF0F1E8BA7FE0008F3C1 /* Build configuration list for PBXNativeTarget "SoloAppTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +430,7 @@
 				E7F7FF111E8BA7FE0008F3C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
