@@ -17,13 +17,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     
-    var item : Item?
+    var myItem : Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let item = item {
-            nameTextField.text = item.name
+        
+        // Updates the label text field with the item that has been selected for edit
+        if let editItem = myItem {
+            nameTextField.text = editItem.name
         }
         
     }
@@ -37,8 +39,8 @@ class ViewController: UIViewController {
     // Saves the item when the save button on the header bar is pressed
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if sender as AnyObject? === saveButton {
-            let name = nameTextField.text ?? ""
-            item = Item(name: name)
+            let name = nameTextField.text ?? "" // returns value as optional if it has a value otherwise returns a default value
+            myItem = Item(name: name)
         }
     }
  

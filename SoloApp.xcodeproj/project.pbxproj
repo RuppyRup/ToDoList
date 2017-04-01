@@ -16,7 +16,6 @@
 		E7F7FF131E8BC0600008F3C1 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7FF121E8BC0600008F3C1 /* ItemTableViewCell.swift */; };
 		E7F7FF151E8BC78E0008F3C1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7FF141E8BC78E0008F3C1 /* Item.swift */; };
 		E7F7FF171E8BC9F90008F3C1 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7FF161E8BC9F90008F3C1 /* ItemTableViewController.swift */; };
-		E7F7FF191E8E8D620008F3C1 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7FF181E8E8D620008F3C1 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,6 @@
 		E7F7FF121E8BC0600008F3C1 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		E7F7FF141E8BC78E0008F3C1 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E7F7FF161E8BC9F90008F3C1 /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
-		E7F7FF181E8E8D620008F3C1 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +92,6 @@
 				E7F7FF121E8BC0600008F3C1 /* ItemTableViewCell.swift */,
 				E7F7FF141E8BC78E0008F3C1 /* Item.swift */,
 				E7F7FF161E8BC9F90008F3C1 /* ItemTableViewController.swift */,
-				E7F7FF181E8E8D620008F3C1 /* DataService.swift */,
 			);
 			path = SoloApp;
 			sourceTree = "<group>";
@@ -158,6 +155,7 @@
 				TargetAttributes = {
 					E7F7FEEE1E8BA7FD0008F3C1 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = AF2ZVC23ZQ;
 						ProvisioningStyle = Automatic;
 					};
 					E7F7FF021E8BA7FE0008F3C1 = {
@@ -214,7 +212,6 @@
 				E7F7FF171E8BC9F90008F3C1 /* ItemTableViewController.swift in Sources */,
 				E7F7FF151E8BC78E0008F3C1 /* Item.swift in Sources */,
 				E7F7FEF51E8BA7FD0008F3C1 /* ViewController.swift in Sources */,
-				E7F7FF191E8E8D620008F3C1 /* DataService.swift in Sources */,
 				E7F7FF131E8BC0600008F3C1 /* ItemTableViewCell.swift in Sources */,
 				E7F7FEF31E8BA7FD0008F3C1 /* AppDelegate.swift in Sources */,
 			);
@@ -355,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AF2ZVC23ZQ;
 				INFOPLIST_FILE = SoloApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RuppyRup.SoloApp;
@@ -367,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AF2ZVC23ZQ;
 				INFOPLIST_FILE = SoloApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RuppyRup.SoloApp;
@@ -422,6 +421,7 @@
 				E7F7FF0E1E8BA7FE0008F3C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7F7FF0F1E8BA7FE0008F3C1 /* Build configuration list for PBXNativeTarget "SoloAppTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +430,7 @@
 				E7F7FF111E8BA7FE0008F3C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
