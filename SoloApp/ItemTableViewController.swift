@@ -10,17 +10,19 @@ import UIKit
 
 class ItemTableViewController: UITableViewController {
     
-    var items = [Item]()
+    var itemsArray = [Item]()
 
     func loadSampleItems() {
-        items += [Item(name:"Item 1"), Item(name:"Item 2"), Item(name:"Item 3")]
+        
+        
+        itemsArray += [Item(name:"Item 1"), Item(name:"Item 2"), Item(name:"Item 3")]
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadSampleItems()
-        navigationItem.leftBarButtonItem = editButtonItem
+        loadSampleItems() // adds Items to the array
+        navigationItem.leftBarButtonItem = editButtonItem //adds edit button to items can be deleted.Need to also implement to editting override function added as a template and update the code.
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +37,7 @@ class ItemTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return itemsArray.count
     }
 
     
@@ -43,35 +45,36 @@ class ItemTableViewController: UITableViewController {
         let cellIdentifier = "ItemTableViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ItemTableViewCell
 
-        let item = items[indexPath.row]
-        cell.nameLabel.text = item.name
+        let showItem = itemsArray[indexPath.row]
+        cell.nameLabel.text = showItem.name
         return cell
     } 
     
     // Add method for destination view when save is pressed
     @IBAction func unwindToList(sender: UIStoryboardSegue) {
-        let srcViewCon = sender.source as? ViewController
-        let item = srcViewCon?.item
-        if (srcViewCon != nil && item?.name != "") {
+        let srcViewCon = sender.source as? ViewController // downcast segues source ViewController as type ViewController
+        let savedItem = srcViewCon?.myItem
+        if (srcViewCon != nil && savedItem?.name != "") { //use for editing items to update the selected row
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                items[selectedIndexPath.row] = item!
+                itemsArray[selectedIndexPath.row] = savedItem!
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
-            } else {
-                let newIndexPath = IndexPath(row: items.count, section: 0)
-                items.append(item!)
+            } else { // For new row adds a row at the bottom for the new item
+                let newIndexPath = IndexPath(row: itemsArray.count, section: 0)
+                itemsArray.append(savedItem!)
                 tableView.insertRows(at: [newIndexPath], with: .bottom)
             }
         }
     }
     
+    // Segue activated when an item is pressed. Gives a value to myItem
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail" {
             let detailVC = segue.destination as! ViewController
            
             if let selectedCell = sender as? ItemTableViewCell {
                 let indexPath = tableView.indexPath(for: selectedCell)!
-                let selectedItem = items[indexPath.row]
-                detailVC.item = selectedItem
+                let selectedItem = itemsArray[indexPath.row]
+                detailVC.myItem = selectedItem //Viewcontroller has the Item: myItem defined
             }
         }
         else if segue.identifier == "AddItem" {
@@ -90,10 +93,10 @@ class ItemTableViewController: UITableViewController {
     */
 
     
-    //Override to support editing the table view.
+    //Override to support editing the table view. Used when adding the editing button to remove the item from the ItemArray.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.items.remove(at: indexPath.row)
+            self.itemsArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
